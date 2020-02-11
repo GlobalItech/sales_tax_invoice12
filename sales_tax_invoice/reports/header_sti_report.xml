@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+<!-- for company customized header and footer  -->
+        <template id="sti_report_header" inherit_id="web.internal_layout">
+               <xpath expr="//div[@class='header']" position="replace">
+                  <div class="header">
+            <div class="row">
+                <div class="col-3">
+                    <!-- <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"/> -->
+                </div>
+                <div class="col-2 offset-2 text-center">
+                 <!--    <span t-esc="company.name"/> -->
+                </div>
+                <div class="col-2 offset-3 text-right">
+                    <!-- <ul class="list-inline">
+                        <li class="list-inline-item"><span class="page"/></li>
+                        <li class="list-inline-item">/</li>
+                        <li class="list-inline-item"><span class="topage"/></li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+               
+               </xpath>
+        </template>   
+        
+        
+        
+        
+        
+        <!-- 
+        <template id="sti_report_external_layout">
+
+            <t t-if="o and 'company_id' in o">
+
+                <t t-set="company" t-value="o.company_id"/>
+
+            </t>
+
+            <t t-if="not o or not 'company_id' in o">
+
+                <t t-set="company" t-value="res_company"/>
+
+            </t>
+
+            <div class="article">
+
+                <t t-call="sales_tax_invoice.sti_report_header"/>
+
+                <t t-raw="0"/>
+
+                <t t-call="jt_my_invoice_report.custom_my_layout_footer"/>
+
+            </div>
+
+        </template>  -->
+  </data>
+</odoo>  
