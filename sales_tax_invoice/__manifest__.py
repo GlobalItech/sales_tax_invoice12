@@ -19,7 +19,7 @@
                 'reports/report1.xml',
                  'reports/header_sti_report.xml',
             ],
-    #'images': ['static/description/banner.gif'],  
+    'images': ['static/description/banner.gif'],  
     'installable' : True,
     'price': 20.00,
      'license': 'AGPL-3',
